@@ -1,0 +1,226 @@
+@media (width>=500px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  /*Forside*/
+  /* Sektion med billede + tekst*/
+  .grid_1-auto-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: stretch;
+    column-gap: 2rem;
+  }
+
+  /* Billedet til venstre */
+  .grid_1-auto-1 img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    align-self: start; /* strækket i højden så det matcher teksten */
+    justify-self: end;
+    margin-left: 10px;
+  }
+  /* Tekstblokken til højre */
+  .intro-text {
+    grid-column: 2;
+    max-width: 350px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-left: 10rem;
+  }
+
+  /* Overskrift "HELLO, I'M SIGNE" */
+  .intro-text h2 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  /* Brødtekst */
+  .intro-text p {
+    margin-bottom: 1rem;
+    font-family: "Red Hat Display", sans-serif;
+  }
+  /* Section: “Want to know more about skincare?”*/
+  section > h2 {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+  /* Galleri (grid_1-1-1)*/
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .grid_1 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    padding: 2rem;
+  }
+
+  /*Skintypes*/
+  .grid_1-2 {
+    display: block;
+    grid-template-columns: 1fr 2fr;
+  }
+  /* “knowing your skintype is essential for good skincare”*/
+  .overskriftskintypes {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+  .billede-med-tekst {
+    position: relative; /*Placerer teksten ovenpå */
+  }
+  .billede-med-tekst img {
+    width: 350px; /* fylder kolonnen */
+    height: 350px;
+    object-fit: cover; /* beskærer billedet uden at strække */
+    display: block; /* fjerner underliggende mellemrum */
+  }
+  .skin-section {
+    display: flex;
+    align-items: center; /* centrer billedet og teksten vertikalt */
+    gap: 80px; /* mellemrum mellem billede og tekst */
+    border-bottom: 1px solid #ccc;
+  }
+
+  /*skincare*/
+  .overskriftskincare {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+  .grid_2-1 {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+  }
+  .grid_2-1 .billede-med-tekst {
+    order: 2; /* flyt billedet til højre */
+    justify-content: end;
+    margin: 0;
+    gap: 0;
+  }
+  .grid_2-1 .billede-med-tekst img {
+    width: 350px;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+  }
+  .grid_2-1 .punkter {
+    flex: 3;
+  }
+  /*routines*/
+  .overskriftroutine {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+}
+/*MOBIL*/
+@media (width<=500px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  /* Øverste grid: billede venstre, tekst højre */
+  .grid_1-auto-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .grid_1-auto-1 img {
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  .intro-text h2 {
+    margin-bottom: 5px;
+  }
+
+  .intro-text {
+    width: 60%;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  section > h2 {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+
+  /* Galleri vertikalt */
+  .grid_1-1-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid_1-1-1 .billedelink {
+    width: 100%;
+  }
+
+  .grid_1-1-1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Nederste tekst */
+  .grid_1 {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+  /*Skintypes*/
+  .grid_1-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .overskriftskintypes {
+    padding: 0.5rem 0;
+    margin-top: 0;
+    text-align: center; /* centrer overskrift på mobil */
+  }
+
+  .billede-med-tekst {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrer billedet */
+    gap: 0.5rem; /* afstand mellem billede og tekst */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .billede-med-tekst img {
+    width: 100%; /* fylder hele containeren */
+    height: auto; /* bevarer proportioner */
+    object-fit: cover;
+    display: block;
+  }
+  .skin-section {
+    display: flex;
+    flex-direction: column; /* stablet vertikalt */
+    align-items: center;
+  }
+  .skin-section .punkter {
+    margin-left: 50px;
+    padding: 2rem;
+  }
+  /*skincare*/
+  .grid_2-1 {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+  }
+}
